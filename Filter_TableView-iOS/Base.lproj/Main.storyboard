@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Filter_TableView_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="art_Image" translatesAutoresizingMaskIntoConstraints="NO" id="GHE-sD-cgB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtn-Ys-kqN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yfB-sk-OlM">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <searchBar contentMode="redraw" showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-yh-RSH">
+                                <rect key="frame" x="0.0" y="20" width="320" height="100"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>All</string>
+                                    <string>Fruits</string>
+                                    <string>Vegetables</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T0b-ZS-2TH">
+                                <rect key="frame" x="0.0" y="120" width="320" height="360"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="115" id="DrK-lO-7Hy" customClass="TVCell" customModule="Filter_TableView_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="115"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DrK-lO-7Hy" id="A8p-1g-CIH">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="114.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackberries" translatesAutoresizingMaskIntoConstraints="NO" id="74q-b1-PRk">
+                                                    <rect key="frame" x="15" y="11" width="93" height="93"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="93" id="Fw7-Gv-B8d"/>
+                                                        <constraint firstAttribute="width" constant="93" id="zmf-du-beS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8F-OA-db8">
+                                                    <rect key="frame" x="116" y="11" width="189" height="36"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPW-5p-EEi">
+                                                    <rect key="frame" x="116" y="85.5" width="189" height="18"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="74q-b1-PRk" firstAttribute="top" secondItem="A8p-1g-CIH" secondAttribute="top" constant="11" id="2Nl-NH-7vD"/>
+                                                <constraint firstItem="g8F-OA-db8" firstAttribute="leading" secondItem="74q-b1-PRk" secondAttribute="trailing" constant="8" id="M9i-hy-LxM"/>
+                                                <constraint firstAttribute="trailing" secondItem="kPW-5p-EEi" secondAttribute="trailing" constant="15" id="RZy-6O-SIc"/>
+                                                <constraint firstItem="74q-b1-PRk" firstAttribute="leading" secondItem="A8p-1g-CIH" secondAttribute="leading" constant="15" id="XcV-sd-wOc"/>
+                                                <constraint firstItem="g8F-OA-db8" firstAttribute="top" secondItem="A8p-1g-CIH" secondAttribute="top" constant="11" id="bpM-Qe-gTJ"/>
+                                                <constraint firstItem="kPW-5p-EEi" firstAttribute="leading" secondItem="74q-b1-PRk" secondAttribute="trailing" constant="8" id="jP2-Fl-vPy"/>
+                                                <constraint firstAttribute="bottom" secondItem="kPW-5p-EEi" secondAttribute="bottom" constant="11" id="kcq-eE-Wut"/>
+                                                <constraint firstAttribute="bottom" secondItem="74q-b1-PRk" secondAttribute="bottom" constant="11" id="rCZ-23-1dH"/>
+                                                <constraint firstAttribute="trailing" secondItem="g8F-OA-db8" secondAttribute="trailing" constant="15" id="z0y-ye-ZWV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="iv_Image" destination="74q-b1-PRk" id="Gi2-bM-oFv"/>
+                                            <outlet property="la_Calories" destination="kPW-5p-EEi" id="xbk-yA-pxI"/>
+                                            <outlet property="la_Name" destination="g8F-OA-db8" id="ytW-I7-dGp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="AS0-w0-Evg"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1hg-5q-jCd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oO0-yh-RSH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1TB-Un-y0s"/>
+                            <constraint firstItem="GHE-sD-cgB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4J8-rK-7lL"/>
+                            <constraint firstItem="oO0-yh-RSH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="EXH-8f-HiJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GHE-sD-cgB" secondAttribute="bottom" id="HHP-B8-S3Y"/>
+                            <constraint firstItem="T0b-ZS-2TH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="IVt-R1-rt5"/>
+                            <constraint firstItem="oO0-yh-RSH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ig6-5Q-lZ0"/>
+                            <constraint firstItem="T0b-ZS-2TH" firstAttribute="top" secondItem="oO0-yh-RSH" secondAttribute="bottom" id="KKk-iV-fAi"/>
+                            <constraint firstItem="T0b-ZS-2TH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="P4y-E0-aUI"/>
+                            <constraint firstItem="GHE-sD-cgB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T6W-WW-Erz"/>
+                            <constraint firstItem="rtn-Ys-kqN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eok-Xl-KdQ"/>
+                            <constraint firstItem="rtn-Ys-kqN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="j8G-AN-y3F"/>
+                            <constraint firstItem="rtn-Ys-kqN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="so1-ZY-qjS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GHE-sD-cgB" secondAttribute="trailing" id="t85-wO-vgt"/>
+                            <constraint firstItem="rtn-Ys-kqN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vvl-5i-ghU"/>
+                            <constraint firstItem="T0b-ZS-2TH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vzU-ew-OQE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="sb_SearchFood" destination="oO0-yh-RSH" id="xVV-RP-gcM"/>
+                        <outlet property="tv_List" destination="T0b-ZS-2TH" id="1Bt-Ji-nqv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.25" y="117.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="art_Image" width="1920" height="1200"/>
+        <image name="blackberries" width="300" height="300"/>
+    </resources>
+</document>
